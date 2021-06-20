@@ -126,7 +126,7 @@ export default function Docx({ darkState }) {
         if (upload)
             WebViewer(
                 {
-                    path: "/webviewer/lib",
+                    path: "/docx/webviewer/lib",
                     extension: "docx"
                 },
                 viewer.current
