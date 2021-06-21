@@ -291,7 +291,7 @@ export default function Docx({ darkState }) {
                 >
                     <div
                         style={{
-                            width: "50%",
+                            width: "30%",
                             minHeight: "500px",
                             marginTop: 7
                         }}
@@ -381,7 +381,7 @@ export default function Docx({ darkState }) {
                         className="webviewer"
                         ref={viewer}
                         style={{
-                            width: "50%",
+                            width: "70%",
                             height: "100vh",
                             float: "right"
                         }}

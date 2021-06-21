@@ -55,20 +55,20 @@ function App(props) {
             display: "flex"
         },
         drawer: {
-            [theme.breakpoints.up("sm")]: {
+            [theme.breakpoints.up("lg")]: {
                 width: drawerWidth,
                 flexShrink: 0
             }
         },
         appBar: {
-            [theme.breakpoints.up("sm")]: {
+            [theme.breakpoints.up("lg")]: {
                 width: `calc(100% - ${drawerWidth}px)`,
                 marginLeft: drawerWidth
             }
         },
         menuButton: {
             marginRight: theme.spacing(2),
-            [theme.breakpoints.up("sm")]: {
+            [theme.breakpoints.up("lg")]: {
                 display: "none"
             },
             backgroundColor: darkState ? grey[900] : blue[500]
@@ -186,7 +186,7 @@ function App(props) {
 
                 <nav className={classes.drawer} aria-label="mailbox folders">
                     {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-                    <Hidden smUp implementation="css">
+                    <Hidden mdUp implementation="css">
                         <Drawer
                             container={container}
                             variant="temporary"
@@ -203,7 +203,7 @@ function App(props) {
                             {drawer}
                         </Drawer>
                     </Hidden>
-                    <Hidden xsDown implementation="css">
+                    <Hidden mdDown implementation="css">
                         <Drawer
                             classes={{
                                 paper: classes.drawerPaper
