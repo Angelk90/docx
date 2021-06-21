@@ -45,10 +45,9 @@ function App(props) {
 
     const [state, setState] = React.useState({
         mobileOpen: false,
-        darkState: isDark,
-        repo: []
+        darkState: isDark
     });
-    const { mobileOpen, darkState, repo } = state;
+    const { mobileOpen, darkState } = state;
 
     const useStyles = makeStyles((theme) => ({
         root: {

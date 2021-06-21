@@ -131,6 +131,7 @@ export default function Docx({ darkState }) {
                 },
                 viewer.current
             ).then((instance) => {
+                instance.setLanguage('it');
                 setInstance(instance);
             });
     }, [upload]);
@@ -376,16 +377,38 @@ export default function Docx({ darkState }) {
                             </AccordionDetails>
                         </Accordion>
                     </div>
-
                     <div
-                        className="webviewer"
-                        ref={viewer}
                         style={{
                             width: "70%",
                             height: "100vh",
-                            float: "right"
+                            float: "right",
+                            marginTop: 7,
+                            marginLeft: 5
                         }}
-                    />
+                    >
+                        <Accordion defaultExpanded>
+                            <AccordionSummary
+                                expandIcon={<ExpandMore />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                Reader
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <div style={{ flex: 1 }}>
+                                    <div
+                                        className="webviewer"
+                                        ref={viewer}
+                                        style={{
+                                            flex: 1,
+                                            height: "100vh",
+                                        }}
+                                    />
+                                </div>
+                            </AccordionDetails>
+                        </Accordion>
+                    </div>
+
                 </div>
             )}
         </MuiPickersUtilsProvider>
